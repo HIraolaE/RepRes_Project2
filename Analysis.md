@@ -1,0 +1,20 @@
+Title
+========================================================
+
+This document summarizes the study done int Storm Database provided by the U.S. National Oceanic and Atmospheric Administration's (NOAA). 
+
+Include synopsis. Summary of the studio results.
+
+
+## Data Processing
+
+We will start creating the data folder if it does not previously exist,  and downloading the data if it has not been already done.
+
+```r
+if(!file.exists("data")){
+  dir.create("data") # It creates the folder only if doesn't exist  
+}
+if(!file.exists("data/StormData.csv.bz2")){
+  download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2", "data/StormData.csv.bz2","curl")  
+}
+```
